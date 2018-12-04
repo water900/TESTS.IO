@@ -4,8 +4,15 @@
 <head>
 <meta charset="utf-8" />
 <link rel="stylesheet"type="text/css" href="https://raw.githubusercontent.com/water900/TESTS.IO/master/rb.css" />
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 <title>a random stuff</title></head>
 <body>
-<p>things get stranger every day</p>
+<p class="rainbow">things get stranger every day</p>
+<script type="text/javascript">
+  $('.rainbow').html(function(i, html) {
+    var chars = $.trim(html).split("");
+  	return '<span>' + chars.join('</span><span>') + '</span>';
+	});
+</script>
 </body>
 </html>
